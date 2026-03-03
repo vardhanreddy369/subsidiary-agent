@@ -49,18 +49,16 @@ export TAVILY_API_KEY="your-tavily-key"
 python agentic_search_pipeline.py --batch 5
 ```
 
-## Example Extraction
+## Final Output Format
 
-**Input Data (SAS/CSV Row):**
-- Parent Company: `Alphabet Inc.`
-- Subsidiary: `Google LLC`
+Here is how the dataset is transformed by the AI Agent:
 
-**AI Agent JSON Output:**
-```json
-{
-  "TimeIn": "2015-10-02",
-  "TimeOut": "N/A",
-  "MainSource": "https://www.sec.gov/Archives/edgar/data/1652044/...",
-  "Type": "Restructuring"
-}
-```
+### Before Processing (Original Data)
+| CIK | FDATE | COMP_NAME | SUB_NAME |
+| :--- | :--- | :--- | :--- |
+| `1652044` | `2016-01-31` | `Alphabet Inc.` | `Google LLC` |
+
+### After AI Processing (Final Deliverable)
+| CIK | FDATE | COMP_NAME | SUB_NAME | **TimeIn** | **TimeOut** | **MainSource** | **Type** |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `1652044` | `2016-01-31` | `Alphabet Inc.` | `Google LLC` | **`2015-10-02`** | **`N/A`** | **`SEC Exhibit...`** | **`Restructuring`** |
