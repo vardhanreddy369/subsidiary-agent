@@ -1,5 +1,7 @@
 # Subsidiary AI Agent
 
+![Project Banner](banner.png)
+
 This project contains research scripts to automate the extraction of historical subsidiary data (`TimeIn`, `TimeOut`, and `MainSource`) from public records using an Agentic AI pipeline.
 
 ## Project Context
