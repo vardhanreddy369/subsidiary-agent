@@ -48,3 +48,19 @@ export TAVILY_API_KEY="your-tavily-key"
 ```bash
 python agentic_search_pipeline.py --batch 5
 ```
+
+## Example Extraction
+
+**Input Data (SAS/CSV Row):**
+- Parent Company: `Alphabet Inc.`
+- Subsidiary: `Google LLC`
+
+**AI Agent JSON Output:**
+```json
+{
+  "TimeIn": "2015-10-02",
+  "TimeOut": "N/A",
+  "MainSource": "https://www.sec.gov/Archives/edgar/data/1652044/...",
+  "Type": "Restructuring"
+}
+```
